@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "deploy": "git add . && git commit -m Heroku && git push heroku main"
+    "deploy": "git add . && git commit -m Heroku && git push heroku main",
+    "postinstall": "tsc && mv -i -v src dist/ && rm -v -rf src"
   },
   "engines": {
     "node": "14.15.0"
