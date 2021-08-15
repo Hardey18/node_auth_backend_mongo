@@ -24,11 +24,6 @@ const register = (req, res, next) => {
                 error: hashError
             });
         }
-        // if (password !== confirmPassword) {
-        //     return res.status(403).json({
-        //         message: "Password does not match",
-        //     })
-        // }
         const _user = new user_1.default({
             _id: new mongoose_1.default.Types.ObjectId(),
             firstname,

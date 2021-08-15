@@ -26,12 +26,6 @@ const register = (req: Request, res: Response, next: NextFunction) => {
             });
         }
 
-        // if (password !== confirmPassword) {
-        //     return res.status(403).json({
-        //         message: "Password does not match",
-        //     })
-        // }
-
         const _user = new User({
             _id: new mongoose.Types.ObjectId(),
             firstname,

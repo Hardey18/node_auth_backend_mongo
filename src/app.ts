@@ -1,3 +1,4 @@
+require('dotenv').config()
 import createError, { HttpError } from 'http-errors';
 import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';

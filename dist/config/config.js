@@ -14,10 +14,9 @@ const MONGO_OPTIONS = {
     autoIndex: false,
     retryWrites: true
 };
-// mongodb+srv://dbnurudeen:<password>@cluster0.89qyi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-const MONGO_USERNAME = process.env.MONGO_USERNAME || 'dbnurudeen';
-const MONGO_PASSWORD = process.env.MONGO_USERNAME || 'nurudeen992';
-const MONGO_HOST = process.env.MONGO_URL || `cluster0.89qyi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const MONGO_USERNAME = process.env.MONGO_USERNAME;
+const MONGO_PASSWORD = process.env.MONGO_PASSWORD;
+const MONGO_HOST = process.env.MONGO_HOST;
 const MONGO = {
     host: MONGO_HOST,
     password: MONGO_PASSWORD,
@@ -25,11 +24,11 @@ const MONGO = {
     options: MONGO_OPTIONS,
     url: `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOST}`
 };
-const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME || 'localhost';
-const SERVER_PORT = process.env.SERVER_PORT || 1337;
-const SERVER_TOKEN_EXPIRETIME = process.env.SERVER_TOKEN_EXPIRETIME || 3600;
-const SERVER_TOKEN_ISSUER = process.env.SERVER_TOKEN_ISSUER || 'coolIssuer';
-const SERVER_TOKEN_SECRET = process.env.SERVER_TOKEN_SECRET || 'superencryptedsecret';
+const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME;
+const SERVER_PORT = process.env.SERVER_PORT;
+const SERVER_TOKEN_EXPIRETIME = process.env.SERVER_TOKEN_EXPIRETIME;
+const SERVER_TOKEN_ISSUER = process.env.SERVER_TOKEN_ISSUER;
+const SERVER_TOKEN_SECRET = process.env.SERVER_TOKEN_SECRET;
 const SERVER = {
     hostname: SERVER_HOSTNAME,
     port: SERVER_PORT,
